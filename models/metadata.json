@@ -1,0 +1,48 @@
+{
+  "data_kind": "simulated",
+  "seed": 42,
+  "total_rows": 730,
+  "train_rows": 584,
+  "test_rows": 146,
+  "split_method": "chronological 80/20; serving models refit on all rows after evaluation",
+  "train_dates": [
+    "2024-01-01",
+    "2025-08-06"
+  ],
+  "test_dates": [
+    "2025-08-07",
+    "2025-12-30"
+  ],
+  "feature_names": [
+    "temperature_f",
+    "is_weekend"
+  ],
+  "target": "sales_scoops",
+  "evaluation": {
+    "baseline": {
+      "mae": 26.239946614132645,
+      "rmse": 31.746682954775597,
+      "r2": 0.6998718264710544
+    },
+    "updated": {
+      "mae": 10.124730048105183,
+      "rmse": 12.743717226641996,
+      "r2": 0.9516382165486716
+    }
+  },
+  "serving_coefficients": {
+    "temperature_f": 3.954822140411323,
+    "is_weekend": 64.57775582101928
+  },
+  "serving_intercept": -156.3233165277689,
+  "versions": {
+    "python": "3.12.14",
+    "scikit-learn": "1.8.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "joblib": "1.5.3"
+  },
+  "model_sha256": "5ea7eff31cddafdb7dc88aa93294c9f091e8fdaee8f0ee3d4212c2e1e4938c14",
+  "data_sha256": "1bf8873a5c4036363e4c74e2975b535dcb902c3f577d7f6841fdb57b192903da",
+  "limitation": "Effects are assumed in simulated data; scores do not establish real-shop accuracy or causality."
+}
